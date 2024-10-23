@@ -6,6 +6,44 @@
     <title>Team Music Player</title>
 </head>
 <body>
-    
+    <!-- HTML Structure -->
+     <main>
+        <section id="music-card">
+            <div id="music-header">
+                <div class="header-item">
+                    <button>&leftarrow;</button>
+                </div>
+                <div class="header-item">
+                    <h3>Music Player</h3>
+                </div>
+                <div class="header-item">
+                    <button class="volume-btn"></button>
+                    <div class="volume-control">
+                        <input type="range" name="volume" id="volume-range">
+                    </div>
+                </div>
+            </div>
+            <div id="music-info">
+                <div class="album-cover">
+                </div>
+                <div class="music-body">
+                    <h2 class="music-title">Mogbe</h2>
+                    <h4 class="artiste-name">Asake</h4>
+                </div>
+            </div>
+            <div id="music-progress">
+                <div>
+                    <input type="range" id="progress-bar">
+                </div>
+                <div class="music-timer">
+                    <p id="current-timer">00:00</p>
+                    <p id="song-duration">00:00</p>
+                </div>
+            </div>
+            <div class="music-controls">
+                <button id="prevBtn">1</button>
+                <button id="playPlauseBtn">2</button>
+                <button id="nextBtn">3</button>
+            </div>
 </body>
 </html>
