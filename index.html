@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Box Icon Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Team Music Player</title>
 </head>
 <body>
@@ -11,13 +13,17 @@
         <section id="music-card">
             <div id="music-header">
                 <div class="header-item">
-                    <button>&leftarrow;</button>
+                    <button>
+                        <i class='bx bxs-chevron-left'></i>
+                    </button>
                 </div>
                 <div class="header-item">
                     <h3>Music Player</h3>
                 </div>
                 <div class="header-item">
-                    <button class="volume-btn"></button>
+                    <button class="volume-btn">
+                        <i class='bx bx-volume-low'></i>
+                    </button>
                     <div class="volume-control">
                         <input type="range" name="volume" id="volume-range">
                     </div>
@@ -41,9 +47,15 @@
                 </div>
             </div>
             <div class="music-controls">
-                <button id="prevBtn">1</button>
-                <button id="playPlauseBtn">2</button>
-                <button id="nextBtn">3</button>
+                <button id="prevBtn">
+                    <i class='bx bx-chevrons-left'></i>
+                </button>
+                <button id="playPlauseBtn">
+                    <i class='bx bx-play-circle'></i>
+                </button>
+                <button id="nextBtn">
+                    <i class='bx bx-chevrons-right'></i>
+                </button>
             </div>
 </body>
 </html>
