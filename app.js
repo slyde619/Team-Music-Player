@@ -39,7 +39,7 @@ function loadSong(songIndex){
 function playSong(){
     // Check button icon to show pause on play
     const playPauseIcon = playPauseBtn.firstElementChild
-    if(btnIcon.classList.contains('bx-play-circle')){
+    if(playPauseIcon.classList.contains('bx-play-circle')){
         audio.play()
         playPauseIcon.classList.remove('bx-play-circle')
         playPauseicon.classList.add('bx-pause')
