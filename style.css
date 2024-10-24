@@ -1,0 +1,76 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+
+/* CSS Variables */
+:root{
+    --bg-dark: hsl(0, 0%, 7%);
+    --bg-dark-100: hsl(0, 0%, 12%);
+    --white-color: hsl(0, 0%, 94%);
+    --text-dark: hsl(300, 15%, 5%);
+    --border-sm: 25px;
+    --fs-1: clamp(0.875rem, 0.5173173803526449rem + 1.0075566750629723vw, 1.125rem);
+    --fs-icon: clamp(1.125rem, 0.5884760705289672rem + 1.5113350125944585vw, 1.5rem);
+    --ff: "Poppins", sans-serif;
+}
+
+/* Global CSS Reset */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+    background: var(--bg-dark);
+    line-height: 1.5;
+    font-size: var(--fs-1);
+    font-family: var(--ff);
+    color: var(--white-color);
+    padding-inline: 1em;
+}
+
+/* Utility Classes */
+.btn{
+    background: var(--white-color);
+    cursor: pointer;
+    padding: .85em 1.25em;
+    outline: 0;
+    border: 0;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icons */
+i{
+    font-size: var(--fs-icon);
+}
+
+/* Main */
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Music card */
+#music-card{
+    background: var(--bg-dark-100);
+    padding: 1.4em 1.6em;
+    width: 400px;
+    max-width: 100%;
+    height: 450px;
+    border-radius: var(--border-sm);
+}
