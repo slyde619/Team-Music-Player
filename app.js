@@ -42,7 +42,7 @@ function playSong(){
     if(playPauseIcon.classList.contains('bx-play-circle')){
         audio.play()
         playPauseIcon.classList.remove('bx-play-circle')
-        playPauseicon.classList.add('bx-pause')
+        playPauseIcon.classList.add('bx-pause')
     }else{
         audio.pause()
         playPauseIcon.classList.add('bx-play-circle')
