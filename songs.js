@@ -13,7 +13,7 @@ const songLibrary = [
     },
     {
         songTitle: "Above The Law",
-        songPath: "music/Highstarlavista-Above-The-Law.mp3",
+        songPath: "assets/music/Highstarlavista-Above-The-Law.mp3",
         artiste: "Highstarlavista",
         coverImage: "https://i0.wp.com/highlifeng.com/wp-content/uploads/2024/02/500x500-3.jpg?w=500&ssl=1"
     },
@@ -21,7 +21,7 @@ const songLibrary = [
         songTitle: "Listen To The Radio",
         songPath: "assets/music/Listen_To_The_Radio.mp3",
         artiste: "Don Williams",
-        coverImage: "https://i0.wp.com/highlifeng.com/wp-content/uploads/2024/02/500x500-3.jpg?w=500&ssl=1"
+        coverImage: "https://www.naijagreen.com/wp-content/uploads/2021/08/Don-Williams-Listen-to-the-Radio.jpg"
     },
     {
         songTitle: "Sability",

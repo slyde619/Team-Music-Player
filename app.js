@@ -12,19 +12,20 @@ const prevBtn = document.querySelector('#prevBtn')
 const playPauseBtn = document.querySelector('#playPauseBtn')
 const nextBtn = document.querySelector('#nextBtn')
 const audio = document.querySelector('#audio')
+const musicCard = document.querySelector('#music-card')
 
 let currentSongIndex = 0
 
-// Update load song on page load
+// Update loadSong() on page load with the first song
 window.addEventListener('DOMContentLoaded', loadSong(currentSongIndex))
 
 // Load Song Function
 function loadSong(songIndex){
     currentSongIndex = songIndex
     // Get song from songs library via index
-    let song = songLibrary[songIndex]
+    let song = songLibrary[songIndex]  
 
-    // dynamically update the music player UI
+    // Dynamically update the music player UI
     audio.src = song.songPath
     albumCover.style.backgroundImage = `url(${song.coverImage})`
     musicTitle.textContent = song.songTitle
@@ -34,22 +35,62 @@ function loadSong(songIndex){
     progressBar.value = 0;
     currentTimer.innerHTML = '00:00';
     totalSongDuration.innerHTML = '00:00';
+
 }
 
-function playSong(){
-    // Check button icon to show pause on play
-    const playPauseIcon = playPauseBtn.firstElementChild
-    if(playPauseIcon.classList.contains('bx-play-circle')){
-        audio.play()
-        playPauseIcon.classList.remove('bx-play-circle')
-        playPauseIcon.classList.add('bx-pause')
-    }else{
-        audio.pause()
-        playPauseIcon.classList.add('bx-play-circle')
-        playPauseIcon.classList.remove('bx-pause')
+// togglePlayPauseButtonIcons function
+function togglePlayPauseButtonIcons() {
+    if (audio.paused) {
+        audio.play();
+        albumCover.classList.add('play')
+    } else {
+        audio.pause();
+        albumCover.classList.remove('play')
+    }
+    updatePlayPauseIcon();
+}
+
+// Add Eventlisteners to play/pause btn
+playPauseBtn.addEventListener('click', togglePlayPauseButtonIcons)
+
+
+// function to update play/pause icon
+function updatePlayPauseIcon() {
+    const playIcon = playPauseBtn.firstElementChild;
+    if (audio.paused) {
+        playIcon.classList.remove('bx-pause');
+        playIcon.classList.add('bx-play-circle');
+    } else {
+        playIcon.classList.remove('bx-play-circle');
+        playIcon.classList.add('bx-pause');
     }
 }
 
 
-// Play Song on Click
-playPauseBtn.addEventListener('click', playSong)
+// Next Btn To Play Next Song
+nextBtn.addEventListener('click', () => {
+    currentSongIndex++
+    // Check if song has reached the end [length of music library]
+    if(currentSongIndex >= songLibrary.length){
+        currentSongIndex = 0
+    }
+
+    loadSong(currentSongIndex)
+    playPauseBtn.click()
+    
+})
+
+// Previous Btn To Play Previous Song
+prevBtn.addEventListener('click', () => {
+    // Decrement the index first
+    currentSongIndex--
+    
+    // Check if we've gone before the start of the playlist
+    if (currentSongIndex < 0) {
+        currentSongIndex = songLibrary.length - 1
+    }
+    
+    // Load and play the new song
+    loadSong(currentSongIndex)
+    playPauseBtn.click()
+})
