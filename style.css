@@ -154,7 +154,7 @@ main {
   height: 120px;
   border-radius: 50%;
   box-shadow: 0 0 0 10px rgba(17, 17, 17, 0.089);
-  background-image: url("https://www.billboard.com/wp-content/uploads/2023/07/J.-Cole-2014-Forest-Hills-Drive-2014-album-art-billboard-1240.jpg?w=1024");
+  background-image: url();
   position: relative;
   background-size: cover;
   animation: spin 10s linear infinite;
@@ -162,6 +162,7 @@ main {
   margin-block-start: 0.75em;
   box-shadow: var(--bx-shadow);
 }
+
 
 .album-cover::after {
   content: "";
@@ -174,6 +175,11 @@ main {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
+
+.album-cover.play{
+  animation-play-state: running;
+}
+
 
 /* Music progress */
 #music-progress {
@@ -269,5 +275,16 @@ main {
   & i{
     font-size: 1.28em;
     font-weight: 500;
+  }
+}
+
+
+/* Animation */
+@keyframes spin {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
   }
 }
