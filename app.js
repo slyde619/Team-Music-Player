@@ -132,6 +132,11 @@ function playNextSong() {
     loadSong(currentSongIndex)
     audio.play()
 }
+  
+//backbutton implementation
+backBtn.addEventListener('click', function(){
+    prevBtn.click()
+})
 
 // Play next song if current song ends
 audio.addEventListener('ended', playNextSong)
