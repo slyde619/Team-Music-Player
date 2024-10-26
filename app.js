@@ -36,7 +36,37 @@ function loadSong(songIndex){
     currentTimer.innerHTML = '00:00';
     totalSongDuration.innerHTML = '00:00';
 
+    // Get audio duration on page load
+    audio.addEventListener('loadedmetadata', () => {
+        progressBar.max = audio.duration
+        totalSongDuration.textContent = formatTime(audio.duration)
+    })
+
 }
+
+// Format Time
+function formatTime(time){
+    let minutes = Math.floor(time / 60)
+    let seconds = Math.floor(time % 60) //Get the remainder using modolus
+
+    if(minutes && seconds < 10){
+        minutes = `0${minutes}`
+        seconds = `0${seconds}`
+    }
+
+    return `${minutes}:${seconds}`
+}
+
+// Update current song duration
+audio.addEventListener('timeupdate', () => {
+    progressBar.value = audio.currentTime
+    currentTimer.innerHTML = formatTime(audio.currentTime)
+})
+
+// Update song duration on slider change
+progressBar.addEventListener('change', () => {
+    audio.currentTime = progressBar.value
+})
 
 // togglePlayPauseButtonIcons function
 function togglePlayPauseButtonIcons() {
@@ -94,3 +124,13 @@ prevBtn.addEventListener('click', () => {
     loadSong(currentSongIndex)
     playPauseBtn.click()
 })
+
+// Handle next song if audio ends
+function playNextSong() {
+    currentSongIndex++
+    loadSong(currentSongIndex)
+    audio.play()
+}
+
+// Play next song if current song ends
+audio.addEventListener('ended', playNextSong)
