@@ -49,7 +49,7 @@ function formatTime(time){
     let minutes = Math.floor(time / 60)
     let seconds = Math.floor(time % 60) //Get the remainder using modolus
 
-    if(minutes && seconds < 10){
+    if(minutes < 10 && seconds < 10){
         minutes = `0${minutes}`
         seconds = `0${seconds}`
     }
