@@ -38,6 +38,7 @@ function loadSong(songIndex){
 
     // Get audio duration on page load
     audio.addEventListener('loadedmetadata', () => {
+        // Max value to be audio duration
         progressBar.max = audio.duration
         totalSongDuration.textContent = formatTime(audio.duration)
     })
