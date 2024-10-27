@@ -106,22 +106,22 @@ main {
 
 /* volume control styles */
 
-.volume-btn {
+#volume-wrap {
   position: relative;
 }
 
 .volume-control {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 147%;
   right: 0;
   display: none;
+  left: 14%;
+  transform: rotate(90deg);
 }
 
-.volume-btn:hover .volume-control {
-  display: block;
+.volume-control.active {
+    display: block;
 }
-
 #volume-range {
   width: 100px;
   appearance: none;
