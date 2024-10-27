@@ -140,3 +140,8 @@ backBtn.addEventListener('click', function(){
 
 // Play next song if current song ends
 audio.addEventListener('ended', playNextSong)
+
+// Volume Control
+volumeBtn.addEventListener('click', function () {
+    volumeControl.parentElement.classList.toggle('active')
+}) 
