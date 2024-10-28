@@ -31,5 +31,34 @@ JavaScript
 # Installation
 ### Installation Guide
 #### Prerequisites
-- Clone repository: ```git clone``` https://github.com/slyde619/Team-Music-Player
 
+- A modern web browser
+- Git installed on your machine
+- A code editor (VS Code, Sublime Text etc.)
+
+ ### Getting Started 
+- Clone the repository: ```git clone``` https://github.com/slyde619/Team-Music-Player
+
+  ### Navigate to Project
+  - ```cd``` Team-Music-Player
+
+  ### Open Project
+  - Double click the index.html file to open in browser
+  ##### OR
+  Use Live Server in VS Code
+
+  - Install Live Server extension
+  - Right click on index.html
+  - Select "Open with Live Server"
+
+  # Authors
+  ##### Godwin Jonathan
+  ##### Aliyu Ibrahim Jibril
+  ##### Amarachi Ukoha
+  ##### Onwuama Peter Chinedu
+
+  ### Live Demo
+  Visit [Mellodee] (https://mellodee.netlify.app) to see the live version
+
+  ### Contact
+  If you have any questions or feedback, please open an issue in the GitHub repository.
