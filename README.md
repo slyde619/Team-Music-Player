@@ -10,7 +10,7 @@ Welcome aboard fellow developers, this is a cross-platform music player built us
 - Track Navigation
 
 # Technical Stack
-# frontend
+#### frontend
 
 HTML5
 - <audio> element for audio playback
@@ -30,6 +30,4 @@ JavaScript
 
 # Installation
 - Clone repository: git clone https://github.com/slyde619/Team-Music-Player
-- Install dependencies: npm install
-- Run application: npm start
 
