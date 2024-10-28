@@ -60,5 +60,5 @@ JavaScript
   ### Live Demo
   Visit [Mellodee] (https://mellodee.netlify.app) to see the live version
 
-  ### Contact
+  ## Contact
   If you have any questions or feedback, please open an issue in the GitHub repository.
