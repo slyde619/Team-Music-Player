@@ -57,7 +57,7 @@ JavaScript
   ##### Amarachi Ukoha
   ##### Onwuama Peter Chinedu
 
-  ### Live Demo
+  ## Live Demo
   Visit [Mellodee] (https://mellodee.netlify.app) to see the live version
 
   ## Contact
