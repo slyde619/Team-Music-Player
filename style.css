@@ -112,11 +112,11 @@ main {
 
 .volume-control {
   position: absolute;
-  top: 147%;
+  top: 300%;
   right: 0;
   display: none;
-  left: 14%;
-  transform: rotate(90deg);
+  left: 10%;
+  transform: rotate(-90deg);
 }
 
 .volume-control.active {
