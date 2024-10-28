@@ -13,6 +13,7 @@ const playPauseBtn = document.querySelector('#playPauseBtn')
 const nextBtn = document.querySelector('#nextBtn')
 const audio = document.querySelector('#audio')
 const musicCard = document.querySelector('#music-card')
+const volumeIcon = document.querySelector('#volume-icon')
 
 let currentSongIndex = 0
 
@@ -145,3 +146,20 @@ audio.addEventListener('ended', playNextSong)
 volumeBtn.addEventListener('click', function () {
     volumeControl.parentElement.classList.toggle('active')
 }) 
+
+// Volume increase / decrease/ mute audio //
+volumeControl.addEventListener('input', function () {
+    audio.volume = volumeControl.value
+    updateVolumeIcon()
+})
+
+// Update Volume icon //
+function updateVolumeIcon(){
+    if (audio.volume === 0){
+        volumeIcon.className = 'bx bx-volume-mute'
+    } else if (audio.volume < 0.5){
+        volumeIcon.className = 'bx bx-volume-low'
+    }  else {
+        volumeIcon.className = 'bx bx-volume-full'
+    }
+}
